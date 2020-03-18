@@ -34,6 +34,19 @@ public class SecondActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
+        if(requestCode == 3){
 
+            if(resultCode == RESULT_OK){
+
+                String name = data.getStringExtra("completeName");
+                String phoneNum = data.getStringExtra("completePhoneNum");
+                binding.scName.setText(name);
+                binding.scPhoneNum.setText(phoneNum);
+            }
+        }
+    }
 }
