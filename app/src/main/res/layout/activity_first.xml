@@ -34,7 +34,8 @@
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="이름"/>
+            android:hint="이름"
+            android:singleLine="true"/>
 
         <EditText
             android:id="@+id/frPhoneNum"
@@ -42,7 +43,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="phone"
-            android:hint="전화번호"/>
+            android:hint="전화번호"
+            android:singleLine="true"/>
 
         <Button
             android:id="@+id/addBtn"
