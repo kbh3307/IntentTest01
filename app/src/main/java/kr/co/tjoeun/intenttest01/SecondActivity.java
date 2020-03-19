@@ -37,7 +37,10 @@ public class SecondActivity extends AppCompatActivity {
         binding.dialBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
+                String dialNum = binding.scPhoneNum.getText().toString();
+                String dialNumStr = String.format("tel: %s", dialNum);
+                Uri uri = Uri.parse(dialNumStr);
+                Intent intent = new Intent(Intent.ACTION_DIAL, uri);
                 startActivity(intent);
             }
         });
